@@ -19,11 +19,13 @@ function App() {
   return (
     <div className="flex p-5  bg-slate-500">
       <div className="ml-64 flex flex-col items-center justify-center mr-20">
+        <h1 className="text-4xl font-semibold"> How fast can you type? </h1>
+
         <form className="my-10 ">
           <textarea
             ref={textBoxRef}
             disabled={!isTimeRunning}
-            className="w-[40rem] h-[20rem] p-5 text-lg font-semibold border-2 border-black bg-slate-400"
+            className="w-[40rem] h-[20rem] p-5 text-lg font-semibold border-2 border-black"
             value={text}
             onChange={handleChange}
           />

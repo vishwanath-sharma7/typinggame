@@ -7,7 +7,7 @@
     @apply bg-slate-800 text-white m-1 px-3 py-2 rounded-sm flex items-center shadow-xl my-2;
   }
   .normalkeysPressed {
-    @apply bg-white m-1 px-3 py-2 rounded-sm flex items-center shadow-xl shadow-indigo-700 border border-black;
+    @apply bg-white m-1 px-3 py-2 rounded-sm flex items-center shadow-sm shadow-indigo-700 border border-black;
   }
   .enter {
     @apply bg-slate-800 text-white m-1 px-4 rounded-sm flex items-center shadow-xl;
@@ -16,6 +16,6 @@
     @apply m-1 px-24 bg-slate-800 text-white rounded-sm flex items-center shadow-xl;
   }
   .spacePressed {
-    @apply m-1 px-24 bg-white text-black rounded-sm flex items-center shadow-xl shadow-indigo-700 border border-black;
+    @apply m-1 px-24 bg-white text-black rounded-sm flex items-center shadow-sm shadow-indigo-700 border border-black;
   }
 }

@@ -1,7 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import typesound from '../static/typesound.mp3'
 
 const Keyboard = () => {
   const [key, setKey] = useState('')
+  const [audio, setAudio] = useState(new Audio(typesound))
+
   useEffect(() => {
     document.addEventListener('keydown', detectKeyDown)
   }, [])
@@ -11,6 +14,7 @@ const Keyboard = () => {
   const detectKeyDown = (e) => {
     keyPressed = e.code
     setKey(keyPressed)
+    setAudio(audio.play())
     setTimeout(() => {
       setKey('')
     }, 300)

@@ -25,20 +25,25 @@ const Interface = (props) => {
     props.setIsTimeRunning(false)
     setWordCount(props.wordCount)
   }
+
+  const showWordCount = () => {
+    if (props.isTimeRunning) {
+      return <div className="my-10"> Time Remaining: {timeRemaining}</div>
+    } else if (timeRemaining === 0) {
+      return <div className="my-10">Word Count: {wordCount} </div>
+    }
+  }
   return (
     <>
       <div className="flex flex-col font-semibold items-center justify-center h-screen w-96 mr-10 text-4xl">
-        <div
+        <button
           className="btn border border-black py-5 px-10 "
           onClick={startGame}
+          disabled={props.isTimeRunning}
         >
           Start
-        </div>
-        {props.isTimeRunning ? (
-          <div className="my-10"> Time Remaining: {timeRemaining}</div>
-        ) : (
-          <div className="my-10">Word Count: {wordCount} </div>
-        )}
+        </button>
+        {showWordCount()}
       </div>
     </>
   )
