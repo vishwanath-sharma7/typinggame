@@ -4,22 +4,32 @@
 
 @layer components {
   .normalkeys {
-    @apply bg-slate-800 text-white m-1 px-3 py-2 rounded-sm flex items-center my-3;
+    /* @apply bg-slate-800 text-white m-1 px-3 py-2 rounded-sm flex items-center my-3;
+     */
+ @apply bg-cyan-700 bg-opacity-30 text-white backdrop-blur-lg m-1 px-3 py-2 rounded-sm flex items-center my-3;
+
   }
   .normalkeysPressed {
-    @apply bg-white m-1 px-3 py-2 rounded-sm flex items-center my-2;
+    @apply bg-cyan-300 m-1 px-3 py-2 rounded-sm flex items-center my-2;
   }
   .enter {
-    @apply bg-slate-800 text-white m-1 px-4 rounded-sm flex items-center shadow-xl;
+    /* @apply bg-slate-800 text-white m-1 px-4 rounded-sm flex items-center shadow-xl; */
+
+@apply bg-cyan-700 bg-opacity-30 text-white backdrop-blur-lg m-1 px-4 rounded-sm flex items-center shadow-xl;
+    
   }
   .space {
-    @apply m-1 px-24 bg-slate-800 text-white rounded-sm flex items-center shadow-xl;
+    @apply m-1 px-24 bg-cyan-700 bg-opacity-30 text-white backdrop-blur-lg rounded-sm flex items-center shadow-xl;
   }
   .spacePressed {
-    @apply m-1 px-24 bg-white text-black rounded-sm flex items-center shadow-sm shadow-indigo-700 border border-black;
+    @apply m-1 px-24 bg-cyan-300 text-black rounded-sm flex items-center shadow-sm shadow-indigo-700 border border-black;
   }
 }
 
 body{
-  @apply bg-orange-400
+  @apply bg-zinc-800
+}
+
+textarea {
+  resize: none;
 }

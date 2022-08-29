@@ -17,15 +17,15 @@ function App() {
     setText(e.target.value)
   }
   return (
-    <div className="flex px-56 bg-orange-400">
+    <div className="flex  h-screen w-screen overflow-hidden">
       <div className="ml-64 flex flex-col items-center justify-center mr-20">
-        <h1 className="text-4xl font-semibold"> How fast can you type? </h1>
+        <h1 className="text-4xl font-semibold  bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-cyan-600"> How fast can you type? </h1>
 
-        <form className="my-10 ">
+        <form className="my-2 ">
           <textarea
             ref={textBoxRef}
             disabled={!isTimeRunning}
-            className="w-[40rem] h-[20rem] p-5 text-lg font-semibold border-2 border-black"
+            className={`w-[40rem] h-[20rem] p-5 text-lg text-slate-100 font-semibold border-2 ${!isTimeRunning ? "border-black" : "border-cyan-500/80"} rounded-lg ${isTimeRunning ? "bg-gray-800" : "bg-zinc-800"}`}
             value={text}
             onChange={handleChange}
           />
