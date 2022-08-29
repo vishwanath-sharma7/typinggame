@@ -17,7 +17,7 @@ function App() {
     setText(e.target.value)
   }
   return (
-    <div className="flex p-5  bg-slate-500">
+    <div className="flex px-56 bg-orange-400">
       <div className="ml-64 flex flex-col items-center justify-center mr-20">
         <h1 className="text-4xl font-semibold"> How fast can you type? </h1>
 

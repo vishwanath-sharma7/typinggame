@@ -4,10 +4,10 @@
 
 @layer components {
   .normalkeys {
-    @apply bg-slate-800 text-white m-1 px-3 py-2 rounded-sm flex items-center shadow-xl my-2;
+    @apply bg-slate-800 text-white m-1 px-3 py-2 rounded-sm flex items-center my-3;
   }
   .normalkeysPressed {
-    @apply bg-white m-1 px-3 py-2 rounded-sm flex items-center shadow-sm shadow-indigo-700 border border-black;
+    @apply bg-white m-1 px-3 py-2 rounded-sm flex items-center my-2;
   }
   .enter {
     @apply bg-slate-800 text-white m-1 px-4 rounded-sm flex items-center shadow-xl;
@@ -18,4 +18,8 @@
   .spacePressed {
     @apply m-1 px-24 bg-white text-black rounded-sm flex items-center shadow-sm shadow-indigo-700 border border-black;
   }
+}
+
+body{
+  @apply bg-orange-400
 }

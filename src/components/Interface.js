@@ -17,7 +17,7 @@ const Interface = (props) => {
   const startGame = () => {
     props.setText('')
     props.setIsTimeRunning(true)
-    setTimeRemaining(15)
+    setTimeRemaining(60)
     props.textBoxRef.current.disabled = false
     props.textBoxRef.current.focus()
   }
@@ -30,7 +30,12 @@ const Interface = (props) => {
     if (props.isTimeRunning) {
       return <div className="my-10"> Time Remaining: {timeRemaining}</div>
     } else if (timeRemaining === 0) {
-      return <div className="my-10">Word Count: {wordCount} </div>
+      return (
+        <>
+          <div className="my-10">You type at a speed of {wordCount} words per minute. </div>
+
+        </>
+      )
     }
   }
   return (

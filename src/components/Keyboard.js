@@ -21,7 +21,7 @@ const Keyboard = () => {
   }
 
   return (
-    <div className="container bg-gradient-to-r from-cyan-500 to-blue-400 flex flex-col border-4 border-black shadow-xl rounded-lg w-[40rem] my-5 ">
+    <div className="container bg-gradient-to-r from-red-500 to-cyan-400 flex flex-col border-4 border-black shadow-xl rounded-lg w-[40rem] my-5">
       <div id="row1" className="flex justify-center">
         <div
           className={key === 'Backquote' ? 'normalkeysPressed' : 'normalkeys'}
