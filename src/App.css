@@ -6,23 +6,30 @@
   .normalkeys {
     /* @apply bg-slate-800 text-white m-1 px-3 py-2 rounded-sm flex items-center my-3;
      */
- @apply bg-cyan-700 bg-opacity-30 text-white backdrop-blur-lg m-1 px-3 py-2 rounded-sm flex items-center my-3;
+ @apply bg-cyan-600 bg-opacity-25 text-white backdrop-blur-lg m-1 px-3 py-2 rounded-sm flex items-center my-3 shadow-md shadow-cyan-500 ;
 
   }
   .normalkeysPressed {
-    @apply bg-cyan-300 m-1 px-3 py-2 rounded-sm flex items-center my-2;
+    @apply bg-cyan-600 bg-opacity-30 text-white m-1 px-3 py-2 backdrop-blur-lg rounded-sm flex items-center my-3 shadow-sm shadow-cyan-500;
   }
   .enter {
     /* @apply bg-slate-800 text-white m-1 px-4 rounded-sm flex items-center shadow-xl; */
 
-@apply bg-cyan-700 bg-opacity-30 text-white backdrop-blur-lg m-1 px-4 rounded-sm flex items-center shadow-xl;
+@apply bg-cyan-600 bg-opacity-30 text-white backdrop-blur-lg m-1 px-4 rounded-sm flex items-center shadow-md shadow-cyan-500;
+    
+  }
+
+  .enter-pressed {
+    /* @apply bg-slate-800 text-white m-1 px-4 rounded-sm flex items-center shadow-xl; */
+
+@apply bg-cyan-600 bg-opacity-30 text-white backdrop-blur-lg m-1 px-4 rounded-sm flex items-center shadow-sm shadow-cyan-500;
     
   }
   .space {
-    @apply m-1 px-24 bg-cyan-700 bg-opacity-30 text-white backdrop-blur-lg rounded-sm flex items-center shadow-xl;
+    @apply m-1 px-24 bg-cyan-600 bg-opacity-30 text-white backdrop-blur-lg rounded-sm flex items-center shadow-md shadow-cyan-500;
   }
   .spacePressed {
-    @apply m-1 px-24 bg-cyan-300 text-black rounded-sm flex items-center shadow-sm shadow-indigo-700 border border-black;
+    @apply m-1 px-24 bg-cyan-600 bg-opacity-30 rounded-sm flex items-center text-white shadow-sm shadow-cyan-500;
   }
 }
 

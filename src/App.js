@@ -19,8 +19,7 @@ function App() {
   return (
     <div className="flex  h-screen w-screen overflow-hidden">
       <div className="ml-64 flex flex-col items-center justify-center mr-20">
-        <h1 className="text-4xl font-semibold  bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-cyan-600"> How fast can you type? </h1>
-
+        <h1 className="text-4xl font-semibold  bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-cyan-600 mt-2"> How fast can you type? </h1>
         <form className="my-2  ">
           <textarea
             ref={textBoxRef}

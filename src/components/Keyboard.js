@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
-import typesound from '../static/typesound.mp3'
+import React, { useEffect, useState } from 'react'
 import softType from '../static/softType.wav'
 
 const Keyboard = () => {
@@ -8,9 +7,9 @@ const Keyboard = () => {
 
 
 
-  function createAudio(sound) {
+  function createAudio() {
 
-    const audio = new Audio(sound);
+    const audio = new Audio(softType);
     audio.volume = 0.2;
     audio.play()
 
@@ -22,8 +21,7 @@ const Keyboard = () => {
   let keyPressed
 
   const detectKeyDown = (e) => {
-    createAudio(softType);
-
+    createAudio();
     keyPressed = e.code
     setKey(keyPressed)
     setTimeout(() => {
@@ -32,7 +30,7 @@ const Keyboard = () => {
   }
 
   return (
-    <div className="container bg-gradient-to-r from-zinc-600 to-zinc-900 flex flex-col border-4 border-black shadow-xl rounded-lg w-[40rem] my-5">
+    <div className="container bg-gradient-to-r from-zinc-600 to-zinc-900 flex flex-col border-4 border-black shadow-cyan-900 shadow-md rounded-lg w-[40rem] my-5 py-2">
       <div id="row1" className="flex justify-center">
         <div
           className={key === 'Backquote' ? 'normalkeysPressed' : 'normalkeys'}
@@ -174,7 +172,7 @@ const Keyboard = () => {
         <div className={key === 'Quote' ? 'normalkeysPressed' : 'normalkeys'}>
           '
         </div>
-        <div className={key === 'Enter' ? 'normalkeysPressed' : 'enter'}>
+        <div className={key === 'Enter' ? 'enter-pressed' : 'enter'}>
           Enter
         </div>
       </div>
