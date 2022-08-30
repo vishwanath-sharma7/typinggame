@@ -28,13 +28,13 @@ const Interface = (props) => {
 
   const showWordCount = () => {
     if (props.isTimeRunning) {
-      return <div className="my-10  bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-cyan-600"> Time Remaining: {timeRemaining}</div>
+      return <div className=" py-3 my-10  bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-cyan-600"> Time Remaining: {timeRemaining}</div>
     } else if (timeRemaining === 0) {
       return (
-        <>
-          <div className="my-10 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-cyan-600">You type at a speed of {wordCount} words per minute. </div>
 
-        </>
+        <div className="py-3 my-10 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-cyan-600">You type at a speed of {wordCount} words per minute. </div>
+
+
       )
     }
   }

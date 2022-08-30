@@ -1,10 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import typesound from '../static/typesound.mp3'
+import softType from '../static/softType.wav'
 
 const Keyboard = () => {
   const [key, setKey] = useState('')
-  const [audio, setAudio] = useState(new Audio(typesound))
 
+
+
+
+  function createAudio(sound) {
+
+    const audio = new Audio(sound);
+    audio.volume = 0.2;
+    audio.play()
+
+  }
   useEffect(() => {
     document.addEventListener('keydown', detectKeyDown)
   }, [])
@@ -12,9 +22,10 @@ const Keyboard = () => {
   let keyPressed
 
   const detectKeyDown = (e) => {
+    createAudio(softType);
+
     keyPressed = e.code
     setKey(keyPressed)
-    setAudio(audio.play())
     setTimeout(() => {
       setKey('')
     }, 300)
